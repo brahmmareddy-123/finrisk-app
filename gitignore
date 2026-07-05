@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+
+# Environment variables — NEVER push these
+.env
+backend/.env
+
+# ML model files
+ml_model/model.pkl
+ml_model/le_gender.pkl
+ml_model/le_edu.pkl
+ml_model/le_emp.pkl
+
+# Database
+backend/finance.db
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
