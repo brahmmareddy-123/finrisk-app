@@ -28,4 +28,4 @@ frontend/.vite/
 
 # OS
 .DS_Store
-Thumbs.db
+Thumbs.dbnode_modules/ 
