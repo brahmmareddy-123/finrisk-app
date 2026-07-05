@@ -5,3 +5,6 @@ scikit-learn
 pandas
 numpy
 joblib
+python-dotenv
+anthropic
+groq
