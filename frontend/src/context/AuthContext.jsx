@@ -1,8 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 
-export const API = "https://finrisk-backend-e3xs.onrender.com";
-const AuthContext = createContext(null);
+export const API = import.meta.env.VITE_API_URL || "https://finrisk-backend-e3xs.onrender.com";const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser]     = useState(null);
