@@ -541,7 +541,7 @@ def ai_chat(data: ChatInput, u=Depends(get_user)):
         client = Groq(api_key=os.getenv("GROQ_API_KEY"))
         chat_messages = [{"role":"system","content":"You are a helpful Indian financial advisor. Give concise practical advice in simple language. Focus on Indian context — mention INR, SIP, PPF, FD, Indian banks etc. Keep responses under 100 words."}] + data.history + [{"role":"user","content":data.message}]
         response = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+            model="openai/gpt-oss-20b",
             messages=chat_messages,
             max_tokens=400,
         )
