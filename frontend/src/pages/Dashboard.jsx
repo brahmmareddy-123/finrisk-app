@@ -682,7 +682,12 @@ function AIPage({authHeaders}) {
               {m.role==="user"?"👤":"🤖"}
             </div>
             <div style={{maxWidth:"80%",background:m.role==="user"?"#eef2ff":"#f8fafc",borderRadius:m.role==="user"?"16px 4px 16px 16px":"4px 16px 16px 16px",padding:"10px 14px",fontSize:13,color:"#1e293b",lineHeight:1.6}}>
-              {m.content}
+              <span dangerouslySetInnerHTML={{ __html: m.content
+  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+  .replace(/\*(.*?)\*/g, '<em>$1</em>')
+  .replace(/\n/g, '<br/>')
+  .replace(/\|/g, ' | ')
+}} />
             </div>
           </div>
         ))}
